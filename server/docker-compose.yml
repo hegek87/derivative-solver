@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  derivative-solver-server:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/src
+    ports:
+      - "8080:8080"
+    networks:
+      - client_mynet
+networks:
+  client_mynet:
+    external: true

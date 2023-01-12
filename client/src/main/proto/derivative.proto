@@ -1,0 +1,14 @@
+option java_package = "com.ippon.client";
+option java_multiple_files = true;
+
+package derivative_solver;
+
+
+message Polynomial {
+  repeated int32 coefficients = 1;
+  repeated int32 exponents = 2;
+}
+
+service DerivativeCalculator {
+  rpc findDerivative(Polynomial) returns (Polynomial) {}
+}

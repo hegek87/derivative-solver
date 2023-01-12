@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: derivative-server
+
+server:
+  port:
+    8080
+
+derivative-server:
+  grpc:
+    server: server_mynet
+    port: 8085

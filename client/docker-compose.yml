@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  derivative-solver:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/src
+    ports:
+      - "8081:8081"
+    networks:
+      - mynet
+networks:
+  mynet:

@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: derivative-client
+
+server:
+  port: 8081
+
+derivative-server:
+  grpc:
+    host: derivative-solver-server
+    port: 8085
